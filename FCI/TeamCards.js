@@ -11,8 +11,10 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import Logo from "./logo.png"
 import FCI from "./Fci.js";
+
+import Image from "next/image";
 
 let ExpandMore;
 
@@ -52,14 +54,18 @@ export default function TeamCards() {
       />
       <div style={{
     display: "flex",
-    justifyContent: "center",}}>
-      <CardMedia
+    justifyContent: "center",width: "100%",overflow:"hidden",}}>
+      {/* <CardMedia
         component="img"
         height="194"
-        image="./logo.png"
+        // image="./logo.png"
+        image={Logo}
         alt="GymGenius"
       style={{width:"auto",}}
-      />
+      /> */}
+
+
+       <Image src={Logo} alt="Logo" width={350} height={350} />
       </div>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
